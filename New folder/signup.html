@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign-Up</title>
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;700&family=Ubuntu:wght@500;700&display=swap"
+        rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400&family=Playfair+Display:wght@500;700&family=Ubuntu:wght@500;700&display=swap"
+        rel="stylesheet">
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="css/signup.css">
+</head>
+
+<body>
+    <header class="hidden">
+        <nav>
+            <div class="logo">
+                <a href="index.html">
+                    <img src="images/LogoMakr-7rM4Gi.png" alt="LogoMakr-7rM4Gi.png">
+                </a>
+            </div>
+            <div class="menu-items">
+                <ul>
+                    <li>
+                        <a href="index.html">Home</a>
+                    </li>
+                    <li>
+                        <a href="solution.html">Solution</a>
+                    </li>
+                    <li>
+                        <a href="resources.html">Resource</a>
+                    </li>
+                    <li>
+                        <a href="pricing.html">Pricing</a>
+                    </li>
+                    <li>
+                        <a href="features.html">Features/Templates</a>
+                    </li>
+                    <li>
+                        <a class="log" href="login.html">Login</a>
+                    </li>
+                    <li>
+                        <a class="sign" href="signup.html">Sign-Up</a>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+    <main>
+        <section class="sec1">
+            <div class="heading">
+                <img src="images/LogoMakr-7rM4Gi.png" alt="LogoMakr-7rM4Gi.png">
+                <h3 class="heading-1">Create Account</h3>
+                <p class="text-1">Signup for FREE unlimited surveys, questions & responses. Already a member?<a
+                        href="login.html"><u> Login </u></a></p>
+            </div>
+            <div class="signup">
+
+                <form name="f2" action="signupfunction.php" onsubmit = "return validation()" method="POST">
+
+                    <div class="top-row">
+                        <div class="field-wrap">
+                            <label>
+                                First Name<span class="req">*</span>
+                            </label>
+                            <input type="text" name="name1" required autocomplete="off"/>
+                        </div>
+
+                        <div class="field-wrap">
+                            <label>
+                                Last Name<span class="req">*</span>
+                            </label>
+                            <input type="text" name="name2" required autocomplete="off" />
+                        </div>
+                    </div>
+
+                    <label for="email">E-mail<span class="req">*</span>
+                    </label>
+                    <input type="email" id="email" name="sign-email" autocomplete="off">
+
+                    <label for="password">Password<span class="req">*</span>
+                    </label>
+                    <input type="password" id="password" name="sign-pass" required autocomplete="off">
+                    <div class="form-group"> 
+                        <label for="cpassword">Confirm Password</label> 
+                        <input type="password" class="form-control"
+                            id="cpassword" name="cpassword" autocomplete="off">
+                
+                        <small id="emailHelp" class="form-text text-muted">
+                        Make sure to type the same password
+                        </small> 
+                    </div>  
+
+                    <button type="submit" id="signup-button" name="sign-btn">Sign-Up</button>
+                </form>
+
+            </div>
+        </section>
+    </main>
+
+
+    <footer>
+        <div class="sec2">
+            <div class="s2row">
+                <div class="s2col">
+                    <ul>
+                        <li><u>Help</u></li>
+                        <li><u>Contact</u></li>
+                        <li><u>Terms of Survice</u></li>
+                        <li><span>&copy;2022 Surview</span></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+
+
+    <script>  
+        function validation()  
+        {   
+        var password=document.f2.password.value;  
+        var cpassword=document.f2.cpassword.value;  
+        
+        if(password==cpassword){  
+        return true;  
+        }  
+        else{  
+        alert("password must be same!");  
+        return false;  
+        } 
+            // var em=document.f2.email.value;  
+            // var ps=document.f2.password.value; 
+            // var cp=document.f2.cpassword.value; 
+            // if(em.length=="" && ps.length=="" && cp.length=="") {  
+            //     alert("E-mail and Password fields are empty");
+            //     return false;  
+            // }   
+            // else  
+            // {   
+            //     if(em.value.length=="") {  
+            //         alert("E-mail is empty");  
+            //         return false;  
+            //     }   
+            //     if (ps.value.length=="") {  
+            //     alert("Password field is empty");  
+            //     return false;  
+            //     }  
+            //     if (cp.value.length=="") {  
+            //     alert("Confirm Password field is empty");  
+            //     return false;  
+            //     } 
+            // }                             
+        }  
+    </script>
+    
+    <script src="https://kit.fontawesome.com/555216dd63.js" crossorigin="anonymous"></script>
+</body>
+
+</html>
